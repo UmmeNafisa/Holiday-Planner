@@ -1,0 +1,24 @@
+.body{
+    overflow-x: hidden;
+}
+.login-bg{
+    background-image: url('../../Images/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-icon{
+    font-size: 100px;
+    color: darkblue;
+
+}
+
+.icon-bg{
+background-color: rgb(253, 251, 251);
+}
+.right-side-image img{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    
+}
