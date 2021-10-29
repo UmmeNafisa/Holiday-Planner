@@ -1,0 +1,18 @@
+.des-img-3{
+    height: auto;
+    max-height: 173px;
+    width: 100%;
+}
+
+.des-img-4{
+    height: auto;
+    max-height: 1000px;
+}
+
+.des-images{
+    transition: 1s linear;
+}
+.des-images :hover{
+    transform: scale(1.05);
+
+}
