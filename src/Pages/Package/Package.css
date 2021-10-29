@@ -1,0 +1,28 @@
+.background-color{
+    background-color: #c29d59;
+}
+
+.card-border{
+    border-left: 3px solid #c29d59;
+}
+.countryName{
+    background-color: #c29d59;
+    width: 30%;
+    padding: 8px 0;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 230px 0; 
+    /* //350px */
+}
+
+.package-name{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 900;
+    margin: 5px 0 0 0;
+    text-align: start;
+}
+
+.description{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: start;
+}

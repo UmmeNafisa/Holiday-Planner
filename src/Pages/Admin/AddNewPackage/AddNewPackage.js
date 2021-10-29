@@ -7,13 +7,13 @@ const AddNewPackage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         // data.addEventEmail = user?.email;
-        // fetch('https://young-taiga-92429.herokuapp.com/addEvents', {
-        //     method: "POST",
-        //     headers: { "content-type": "application/json" },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => console.log(result))
+        fetch('http://localhost:5000/addPackages', {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => console.log(result))
         console.log(data);
     }
 
