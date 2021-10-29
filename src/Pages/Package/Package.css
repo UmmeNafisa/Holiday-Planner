@@ -1,7 +1,12 @@
 .background-color{
     background-color: #c29d59;
 }
-
+.text-color{
+    color: #c29d59;
+}
+.text-align{
+    text-align: start;
+}
 .card-border{
     border-left: 3px solid #c29d59;
 }
@@ -18,11 +23,27 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 25px;
     font-weight: 900;
-    margin: 5px 0 0 0;
+    margin: 10px 0 0 0;
     text-align: start;
 }
 
 .description{
     font-family: 'Titillium Web', sans-serif;
     text-align: start;
+}
+
+.icons{
+    color: #c29d59;
+    margin-right: 5px;
+}
+
+.fees{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* media query  */
+@media only screen and (max-width: 600px) {
+    .countryName{
+        /* margin: 250px 0 0 0; */
+    }
 }

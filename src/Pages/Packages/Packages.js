@@ -13,11 +13,11 @@ const Packages = () => {
     }, [])
     return (
         <div style={{ backgroundImage: `url(${packageImg})` }}>
-            <Container>
+            <Container className="pb-5">
 
                 <div>
-                    <h3 className="all-headers"> <span className="fw-bolder">|</span> Amazing Tours</h3>
-                    <h1>Trending, Tours And Fun Destinations</h1>
+                    <h3 className="all-headers text-color fw-bolder pt-5 text-align"> <span className="fw-bolder text-color">|</span> Amazing Tours</h3>
+                    <h2 className="text-align mb-3">Trending, Tours And Fun Destinations </h2>
                 </div>
                 <Row xs={1} md={2} lg={3} className="g-4">
 

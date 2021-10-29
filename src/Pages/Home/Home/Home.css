@@ -1,0 +1,17 @@
+/* common class */
+.background-color{
+    background-color: #c29d59;
+}
+.text-color{
+    color: #c29d59;
+}
+.text-align{
+    text-align: start;
+}
+
+.header-front{
+    font-family: 'Titillium Web', sans-serif;
+}
+.stylish-front{
+    font-family: 'Cormorant Garamond', serif;
+}

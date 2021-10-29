@@ -1,0 +1,55 @@
+.header-front{
+    font-family: 'Titillium Web', sans-serif;
+}
+.stylish-front{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.about-back{
+    background-image: linear-gradient(rgba(219, 224, 228, 0.933), rgba(221, 216, 216, 0.74)), url('https://html.geekcodelab.com/holiday-planners/assets/images/logo-icon.svg') ;
+    background-color: rgba(230, 235, 238, 0.939) ;
+   
+    background-repeat: no-repeat;
+  
+}
+.about-img-border{
+    border: 3px solid #c29d59;
+    padding: 10px;
+}
+
+.big-img{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.small-img {
+    position: relative;
+    left:200px;
+    bottom: 200px;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    max-height: 200px;
+   }
+
+   .about-us{
+    text-align: start;
+    padding-left: 70px;
+   }
+   /* media query  */
+@media only screen and (max-width: 600px) {
+    .small-img {
+        overflow: hidden;
+        left:90px;
+        bottom: 150px;
+        width: auto;
+        max-width: 200px;
+        height: auto;
+        max-height: 200px;
+       }
+       .about-us{
+           margin-top: -150px;
+       }
+
+}
