@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Titillium+Web&display=swap');
+
+.banner-caption{
+    margin-bottom: 150px;
+}
+.banner-title {
+    font-size: 80px;
+    line-height: 90px; 
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.banner-title span{
+    background: #c29d59;
+    padding: 5px 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.banner-img{
+    height: auto;
+    max-height: 100vh;
+    filter: blur(.8px) brightness(0.7);
+}
+
+.banner-caption p{
+    font-size: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* media query  */
+@media only screen and (max-width: 600px) {
+    .banner-caption{
+        margin-bottom: 0px;
+    }
+    .banner-caption p{
+        font-size: 15px;
+    }
+    .banner-title {
+        font-size: 28px;
+        line-height: 30px; 
+        margin-bottom: 10px;
+    }
+}
