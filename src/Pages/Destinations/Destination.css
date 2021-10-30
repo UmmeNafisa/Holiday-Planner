@@ -4,6 +4,9 @@
     width: 100%;
 }
 
+.dest-title{
+margin-top: -23px;
+}
 .des-img-4{
     height: auto;
     max-height: 1000px;
