@@ -13,6 +13,9 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Packages from "./Pages/Packages/Packages";
 import Destinations from "./Pages/Destinations/Destinations";
 import AddNewPackage from "./Pages/Admin/AddNewPackage/AddNewPackage";
+import Login from "./Pages/Login/Login/Login";
+import ClientPage from "./Pages/ClientSite/ClientPage";
+
 
 function App() {
   return (
@@ -32,6 +35,12 @@ function App() {
             </Route>
             <Route path="/packages">
               <Packages />
+            </Route>
+            <Route path="/clientLogin">
+              <Login></Login>
+            </Route>
+            <Route path="/clientPage">
+              <ClientPage></ClientPage>
             </Route>
             <Route path="/destinations">
               <Destinations />

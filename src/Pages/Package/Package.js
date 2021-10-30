@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 
+
 const Package = (prop) => {
     const { imgUrl, countryName, description, packageName, duration, groupSize, packageFees } = prop.pack;
+
     return (
         <div>
             <Col>

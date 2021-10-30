@@ -35,7 +35,7 @@ const Header = () => {
                             <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/adminLogin"><Button varient="light" className="btn btn-info text-white fw-bold"> Admin </Button> </Nav.Link>
                         }
                         {user?.email || user?.name ?
-                            <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/userLogin"><Button varient="light" className="btn btn-all text-white fw-bold"> User Login</Button> </Nav.Link>
+                            <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/clientLogin"><Button varient="light" className="btn btn-all text-white fw-bold"> Client Login</Button> </Nav.Link>
                         }
                         {(user?.email || user?.name) && <div>
                             <Navbar.Text>
