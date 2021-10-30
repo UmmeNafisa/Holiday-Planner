@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import packageImg from '../../Images/wave-design.jpg'
 import './Destination.css'
 import desImg1 from "../../Images/destination/destination-img1.jpg"
@@ -19,8 +19,10 @@ const Destinations = () => {
                     <Col>
                         <Row xs={1} md={1} lg={1} className="g-4">
                             <Col>
-                                <img src={desImg1} alt="" className="img-fluid rounded-3 des-images" />
-                                <Button className="btn-all"> Greece </Button>
+                                <Card.Img src={desImg1} alt="Card image" />
+                                <Card.ImgOverlay>
+                                    <Button className="btn-all"> Greece </Button>
+                                </Card.ImgOverlay>
                             </Col>
 
                         </Row>

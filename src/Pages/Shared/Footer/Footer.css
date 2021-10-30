@@ -1,0 +1,15 @@
+.footer-back-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.933), rgba(0, 0, 0, 0.5)), url("https://html.geekcodelab.com/holiday-planners/assets/images/footer-back.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.icons p{
+    padding: 0 10px;
+    font-size: 28px;
+    color: lightgray;
+    }
+.icons p:hover{
+        color:  #c29d59;
+        transform: scale(1.5);
+    }
+ 
