@@ -5,20 +5,22 @@ import './BookItems.css'
 
 const BookItems = (props) => {
     const { imgUrl, countryName, packageName, _id } = props.items;
-    const [control, setControl] = useState(false);
+    console.log(props)
+    const [newItems, SetnewItems] = useState([]);
+
 
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/deleteItems/${id}`, {
             method: "DELETE",
-            headers: { "content-type": "application/json" }
         })
             .then((res) => res.json())
             .then((data) => {
-                if (data.deletedCount) {
-                    setControl(!control);
-                } else {
-                    setControl(false);
-                }
+                console.log(data)
+                // if (data.deletedCount > 0) {
+                //     alert('Deleted successfully')
+                //     const remainingItems = newItems.filter(user => user._id !== id)
+                //     SetnewItems(remainingItems)
+                // }
             });
 
 
