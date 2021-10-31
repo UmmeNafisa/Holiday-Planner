@@ -29,7 +29,13 @@ const BookItems = (props) => {
                 }
             });
 
-
+        /* const handleBookingItem = () => {
+            // fetch(`http://localhost:5000/bookItems/${id}`, {
+            //     method: "POST",
+            //     headers: { "content-type": "application/json" },
+            //     body: JSON.stringify()
+            // })
+        } */
     }
     return (
         <div>

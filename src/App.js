@@ -18,6 +18,8 @@ import ClientPage from "./Pages/ClientSite/ClientPage";
 import PackageDetails from "./PackageDetails/PackageDetails";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import ConfirmBooking from "./Pages/ConfirmBooking/ConfirmBooking";
+import ManageUsers from "./Pages/Admin/ManageUsers/ManageUsers";
+import Dashboard from "./Pages/Admin/AdminDashBoard/Dashboard";
 
 
 function App() {
@@ -51,13 +53,19 @@ function App() {
             <Route path="/addPackages">
               <AddNewPackage />
             </Route>
+            <Route path="/manageUsers">
+              <ManageUsers />
+            </Route>
+            <Route path="/adminDashboard">
+              <Dashboard />
+            </Route>
             <Route path="/confirmBooking">
               <ConfirmBooking />
             </Route>
             <PrivateRoute path="/packageDetails/:id">
               <PackageDetails />
             </PrivateRoute>
-            <Route path="/notFound">
+            <Route path="*">
               <NotFound />
             </Route>
 

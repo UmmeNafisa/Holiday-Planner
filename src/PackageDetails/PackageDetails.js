@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
-
 
 const PackageDetails = () => {
     const [pack, setPack] = useState([]);
@@ -26,15 +24,8 @@ const PackageDetails = () => {
     }
     return (
         <div className="container header-front" >
-            {/* <Typewriter
-                options={{
-                    strings: [`<h1> ${pack?.countryName.toUpperCase()}</h1>`],
-                    autoStart: true,
-                    loop: true,
-                }}
-            /> */}
-
             <div>
+                <h1>{pack?.countryName}</h1>
                 <img src={pack?.imgUrl} alt="" className="img-fluid" />
                 <h5 className="w-75mx-auto text-center py-2"> {pack?.description} </h5>
             </div>

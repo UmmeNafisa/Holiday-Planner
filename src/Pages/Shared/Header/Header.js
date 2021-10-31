@@ -26,9 +26,9 @@ const Header = () => {
                         <Nav.Link as={Link} to="/home" className="text-color fw-bold header-front" >HOME</Nav.Link>
                         <Nav.Link as={Link} to="/addPackages" className="text-color fw-bold header-front" >ADD PACKAGES</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#about" className="text-color fw-bold header-front" >ABOUT</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#destinations" className="text-color fw-bold header-front" >DESTINATIONS</Nav.Link>
+                        <Nav.Link as={Link} to="clientPage" className="text-color fw-bold header-front" >MANAGE BOOKING</Nav.Link>
 
-                        <Nav.Link as={Link} to="/adminLogin"><Button varient="light" className="btn btn-all text-white fw-bold"> Admin </Button> </Nav.Link>
+                        <Nav.Link as={Link} to="/adminDashboard"><Button varient="light" className="btn btn-all text-white fw-bold"> Admin </Button> </Nav.Link>
 
                         {user?.email || user?.name ?
                             <Button onClick={logOut} varient="light" className="btn btn-all text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/clientLogin"><Button varient="light" className="btn btn-all text-white fw-bold"> Client Login</Button> </Nav.Link>

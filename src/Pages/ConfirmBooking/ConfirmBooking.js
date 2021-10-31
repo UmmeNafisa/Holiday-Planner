@@ -17,7 +17,8 @@ const ConfirmBooking = () => {
                     alert("Your Order Approval is Pending, Very Soon we Confirm you ")
                 }
             })
-        console.log(data);
+
+
 
     };
 
