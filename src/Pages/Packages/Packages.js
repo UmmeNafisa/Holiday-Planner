@@ -20,7 +20,7 @@ const Packages = () => {
             <Container className="pb-5">
                 <div>
                     <h3 className="all-headers text-color fw-bolder pt-5 text-align"> <span className="fw-bolder text-color">|</span> Amazing Tours</h3>
-                    <h2 className="text-align mb-3">Trending, Tours And Fun Destinations </h2>
+                    <h2 className="text-align mb-3 stylish-front">Trending, Tours And Fun Destinations </h2>
                 </div>
                 {
                     packages.length === 0 ? <Spinner animation="border" variant="warning" /> :
