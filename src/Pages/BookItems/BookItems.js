@@ -1,26 +1,31 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import './BookItems.css'
 
 const BookItems = (props) => {
     const { imgUrl, countryName, packageName, _id } = props.items;
-    console.log(props)
-    const [newItems, SetnewItems] = useState([]);
+    const [bookItems, setBookItems] = useState([]);
 
+    useEffect(() => {
+        fetch('http://localhost:5000/bookItems')
+            .then(res => res.json())
+            .then(data => setBookItems(data))
+    }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteItems/${id}`, {
+        // console.log(id)
+        fetch(`http://localhost:5000/bookItems/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
             .then((data) => {
                 console.log(data)
-                // if (data.deletedCount > 0) {
-                //     alert('Deleted successfully')
-                //     const remainingItems = newItems.filter(user => user._id !== id)
-                //     SetnewItems(remainingItems)
-                // }
+                if (data.deletedCount > 0) {
+                    alert('Deleted successfully')
+                    const remainingItems = bookItems.filter(item => item._id !== id)
+                    setBookItems(remainingItems)
+                }
             });
 
 
