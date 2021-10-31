@@ -25,7 +25,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end nav-link" id="responsive-navbar-nav">
                         <Nav.Link as={HashLink} to="/home#home" >HOME</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#packages">PACKAGES</Nav.Link>
+                        <Nav.Link as={Link} to="/addPackages">Add Packages</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#about">ABOUT</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#destinations">DESTINATIONS</Nav.Link>
                         {/* <Nav.Link as={Link} to="/feedbackDetails"> FEEDBACK </Nav.Link>

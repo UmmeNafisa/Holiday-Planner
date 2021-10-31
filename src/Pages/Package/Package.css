@@ -12,13 +12,20 @@
 }
 .countryName{
     background-color: #c29d59;
-    width: 30%;
+    width: 50%;
     padding: 8px 0;
     font-family: 'Cormorant Garamond', serif;
-    margin: 230px 0; 
+    margin: 185px 0; 
     /* //350px */
 }
-
+.countryName:hover{
+    background-color: rgba(0, 0, 0, 0.733);
+}
+.package-img{
+    width : auto; 
+    height: auto;
+    max-height: 220px;
+}
 .package-name{
     font-family: 'Cormorant Garamond', serif;
     font-size: 25px;
@@ -31,6 +38,7 @@
     font-family: 'Titillium Web', sans-serif;
     text-align: start;
 }
+
 
 .icons{
     color: #c29d59;

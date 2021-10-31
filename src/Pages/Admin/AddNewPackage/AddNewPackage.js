@@ -1,9 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import useAuth from '../../../Context/useAuth';
+
 
 const AddNewPackage = () => {
-    const { user } = useAuth();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         // data.addEventEmail = user?.email;
@@ -13,7 +12,12 @@ const AddNewPackage = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result))
+            .then(result => {
+                if (result.insertedId) {
+                    alert("New Package is Added")
+
+                }
+            })
         console.log(data);
     }
 

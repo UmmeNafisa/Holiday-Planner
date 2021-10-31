@@ -21,7 +21,7 @@ const Banner = () => {
                 />
                 <Carousel.Caption className="banner-caption">
                     <h1 className="banner-title fw-bold">Enjoy The Travel With <br /> <span>Holiday Planners</span> </h1>
-                    <p>A journey of a 1000 miles starts with a simple step. </p>
+                    <p>A journey of a 1000 miles starts with a simple step </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,7 +33,7 @@ const Banner = () => {
 
                 <Carousel.Caption className="banner-caption">
                     <h1 className="banner-title fw-bold">Life is Sort and <br /> <span>The World is Wide</span> </h1>
-                    <p>A journey of a 1000 miles starts with a simple step. </p>
+                    <p>Travel is the only thing you buy that makes you richer </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -45,7 +45,7 @@ const Banner = () => {
 
                 <Carousel.Caption className="banner-caption">
                     <h1 className="banner-title fw-bold">Get Ready to Travel <br /> <span>The World</span> </h1>
-                    <p>A journey of a 1000 miles starts with a simple step. </p>
+                    <p>Take only memories, leave only footprints  </p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

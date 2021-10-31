@@ -13,14 +13,14 @@ const Package = (props) => {
         <div>
             <Col>
                 <Card className="border-0 shadow bg-body rounded">
-                    <Card.Img variant="top" src={imgUrl} />
+                    <Card.Img variant="top" src={imgUrl} className="img-fluid package-img" />
                     <Card.ImgOverlay>
                         <Card.Title className="text-uppercase text-white fw-bold countryName">{countryName} </Card.Title>
                     </Card.ImgOverlay>
                     <Card.Body className="card-border">
                         <Card.Title className="package-name">{packageName}</Card.Title>
                         <Card.Text className="description text-muted">
-                            {description}
+                            {description.slice(0, 150)}
                         </Card.Text>
                         <hr />
                         <div className="d-flex justify-content-between align-items-center">
