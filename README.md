@@ -8,7 +8,7 @@ Holiday Planner organizes different tour planing in different countries from Dha
 
 ### Why you Choose Holiday Planner
 
-- We give you best service with cheap rate
+- We give you best packages with cheap rate
 - 5 Star Accommodation
 - Air services
 - All transportation in destination location

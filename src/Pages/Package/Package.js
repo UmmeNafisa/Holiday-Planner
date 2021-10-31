@@ -3,12 +3,13 @@ import { Button, Card, Col } from 'react-bootstrap';
 import './Package.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 
 
 const Package = (props) => {
-    const { imgUrl, countryName, description, packageName, duration, groupSize, packageFees } = props.pack;
-
+    const { imgUrl, countryName, description, packageName, duration, groupSize, packageFees, _id, endDate, startDate } = props.pack;
+    console.log(props.pack);
     return (
         <div>
             <Col>
@@ -42,11 +43,15 @@ const Package = (props) => {
                         <hr />
                         <div className="d-flex justify-content-between">
                             <h2 className="fees"> $ {packageFees}  </h2>
-                            <Button className="btn-all fw-bold px-3 py-2" onClick={() => props.handleBookBtn(props.pack)}> BOOK NOW </Button>
+                            <div> <p> Start : {startDate}  </p>
+                                <p> End : {endDate}  </p></div>
                         </div>
 
                     </Card.Body>
                 </Card>
+                <Link to={`/packageDetails/${_id}`}>
+                    <Button className="btn-all fw-bold px-3 py-2 btn text-align"  > SEE DETAILS </Button>
+                </Link>
             </Col>
         </div>
     );

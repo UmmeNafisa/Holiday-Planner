@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../Context/useAuth';
+import BookItems from '../BookItems/BookItems';
 import './ClientPage.css'
 
 const ClientPage = () => {
-    const { user } = useAuth()
-    return (
-        <div className="d-lg-flex justify-content-center align-items-center">
-            <div>
-                <img src={user?.photoURL} alt="" className="img-fluid profile-img" />
-                <h4 className="profile-name"> {user?.displayName} </h4>
-                <p> {user?.email}</p>
-            </div>
-            <div>
+    const { user } = useAuth();
+    const [bookItems, setBookItems] = useState([]);
 
-                <h4> Your selected booikng list is :  </h4>
-            </div>
-        </div>
+    useEffect(() => {
+        fetch('http://localhost:5000/bookItems')
+            .then(res => res.json())
+            .then(data => setBookItems(data))
+    }, [])
+
+    return (
+        <Container className="my-5">
+            <Row xs={1} md={1} lg={2}>
+                <Col>
+                    <img src={user?.photoURL} alt="" className="img-fluid profile-img" />
+                    <h4 className="profile-name"> {user?.displayName} </h4>
+                    <p> {user?.email}</p>
+                </Col>
+                <Col>
+                    <h4> Your selected booking list is :{bookItems?.length}  </h4>
+                    <Row xs={1} md={1} lg={2} className="g-4">
+                        {
+                            bookItems.map(items => <BookItems key={items._id} items={items} ></BookItems>)
+                        }
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
+
     );
 };
 

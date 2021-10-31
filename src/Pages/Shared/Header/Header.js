@@ -8,7 +8,6 @@ import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    console.log(user)
     return (
         <>
             <Navbar sticky="top" className="bg-white my-3" collapseOnSelect expand="lg">

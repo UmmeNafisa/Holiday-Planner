@@ -15,6 +15,8 @@ import Destinations from "./Pages/Destinations/Destinations";
 import AddNewPackage from "./Pages/Admin/AddNewPackage/AddNewPackage";
 import Login from "./Pages/Login/Login/Login";
 import ClientPage from "./Pages/ClientSite/ClientPage";
+import PackageDetails from "./PackageDetails/PackageDetails";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 
 function App() {
@@ -48,6 +50,9 @@ function App() {
             <Route path="/addPackages">
               <AddNewPackage />
             </Route>
+            <PrivateRoute path="/packageDetails/:id">
+              <PackageDetails />
+            </PrivateRoute>
             <Route path="/notFound">
               <NotFound />
             </Route>
