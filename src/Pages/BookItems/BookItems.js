@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './BookItems.css'
 
 const BookItems = (props) => {
@@ -42,7 +43,7 @@ const BookItems = (props) => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Button className="btn-all me-2" > Confirm Booking </Button>
+                <Link to="/confirmBooking"> <Button className="btn-all me-2" > Confirm Booking </Button></Link>
                 <Button className="btn-all" onClick={() => handleDelete(_id)}  > Delete </Button>
             </Col>
 

@@ -11,7 +11,10 @@ const ClientPage = () => {
     useEffect(() => {
         fetch('http://localhost:5000/bookItems')
             .then(res => res.json())
-            .then(data => setBookItems(data))
+            .then(data => {
+                data.emailAddress = user?.email;
+                setBookItems(data)
+            })
     }, [])
 
     return (

@@ -17,6 +17,7 @@ import Login from "./Pages/Login/Login/Login";
 import ClientPage from "./Pages/ClientSite/ClientPage";
 import PackageDetails from "./PackageDetails/PackageDetails";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import ConfirmBooking from "./Pages/ConfirmBooking/ConfirmBooking";
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
             </Route>
             <Route path="/addPackages">
               <AddNewPackage />
+            </Route>
+            <Route path="/confirmBooking">
+              <ConfirmBooking />
             </Route>
             <PrivateRoute path="/packageDetails/:id">
               <PackageDetails />

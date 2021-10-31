@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 const AddNewPackage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        // data.addEventEmail = user?.email;
+
         fetch('http://localhost:5000/addPackages', {
             method: "POST",
             headers: { "content-type": "application/json" },
