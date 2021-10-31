@@ -9,7 +9,7 @@ const ClientPage = () => {
     const [bookItems, setBookItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookItems')
+        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems')
             .then(res => res.json())
             .then(data => {
                 data.emailAddress = user?.email;

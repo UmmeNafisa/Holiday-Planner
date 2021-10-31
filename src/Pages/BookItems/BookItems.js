@@ -9,14 +9,14 @@ const BookItems = (props) => {
     const [bookItems, setBookItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookItems')
+        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems')
             .then(res => res.json())
             .then(data => setBookItems(data))
     }, [])
 
     const handleDelete = (id) => {
         // console.log(id)
-        fetch(`http://localhost:5000/bookItems/${id}`, {
+        fetch(`https://stormy-inlet-84335.herokuapp.com/bookItems/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -30,7 +30,7 @@ const BookItems = (props) => {
             });
 
         /* const handleBookingItem = () => {
-            // fetch(`http://localhost:5000/bookItems/${id}`, {
+            // fetch(`https://stormy-inlet-84335.herokuapp.com/bookItems/${id}`, {
             //     method: "POST",
             //     headers: { "content-type": "application/json" },
             //     body: JSON.stringify()

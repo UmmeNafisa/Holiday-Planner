@@ -5,7 +5,7 @@ const ManageUsers = () => {
     const [client, SetClient] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/confirmBooking")
+        fetch("https://stormy-inlet-84335.herokuapp.com/confirmBooking")
             .then((res) => res.json())
             .then((data) => SetClient(data));
     }, []);

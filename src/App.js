@@ -44,21 +44,21 @@ function App() {
             <Route path="/clientLogin">
               <Login></Login>
             </Route>
-            <Route path="/clientPage">
+            <PrivateRoute path="/clientPage">
               <ClientPage></ClientPage>
-            </Route>
+            </PrivateRoute>
             <Route path="/destinations">
               <Destinations />
             </Route>
-            <Route path="/addPackages">
+            <PrivateRoute path="/addPackages">
               <AddNewPackage />
-            </Route>
-            <Route path="/manageUsers">
+            </PrivateRoute>
+            <PrivateRoute path="/manageUsers">
               <ManageUsers />
-            </Route>
-            <Route path="/adminDashboard">
+            </PrivateRoute>
+            <PrivateRoute path="/adminDashboard">
               <Dashboard />
-            </Route>
+            </PrivateRoute>
             <Route path="/confirmBooking">
               <ConfirmBooking />
             </Route>
