@@ -26,7 +26,6 @@ const ManageUsers = () => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
                     alert("updated successfully")
-                    SetOrderInfo({})
                 }
             })
     }
