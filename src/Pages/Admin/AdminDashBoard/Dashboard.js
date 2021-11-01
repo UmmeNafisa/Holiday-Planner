@@ -17,15 +17,15 @@ const Dashboard = () => {
                                 <div className="all-menu mt-5">
                                     <li
                                         onClick={() => setControl("allUsers")}
-                                        className="admin-menu p-2 ps-5"
+                                        className="admin-menu p-2 ps-3"
                                     >
-                                        All Users
+                                        &gt; All Bookings
                                     </li>
                                     <li
                                         onClick={() => setControl("addPackages")}
-                                        className="admin-menu p-2 ps-5"
+                                        className="admin-menu p-2 ps-3"
                                     >
-                                        Add New Packages
+                                        &gt; Add New Packages
                                     </li>
 
                                 </div>

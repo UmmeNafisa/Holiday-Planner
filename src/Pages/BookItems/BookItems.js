@@ -37,7 +37,7 @@ const BookItems = (props) => {
         const finalItem = bookItems.find(item => item._id === id)
         finalItem.email = user?.email;
         finalItem.status = "Pending"
-        fetch(`http://localhost:5000/finalConfirmation`, {
+        fetch('http://localhost:5000/finalConfirmation', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(finalItem)

@@ -14,7 +14,7 @@ const ConfirmBooking = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert("Your Order Approval is Pending, Very Soon we Confirm you ")
+                    alert("Your Order Approval is Pending, Very Soon we Confirm you")
                 }
             })
     };
