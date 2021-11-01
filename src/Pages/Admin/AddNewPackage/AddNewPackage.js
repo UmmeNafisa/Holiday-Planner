@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddNewPAckages.css'
 
 
 const AddNewPackage = () => {
@@ -18,17 +19,15 @@ const AddNewPackage = () => {
 
                 }
             })
-        console.log(data);
+        // console.log(data);
     }
 
-
-    console.log(watch("example"));
     return (
         <div>
             <h1 className="mt-5 text-center">Add a New Packages</h1>
-            <div className="login-box w-50 m-auto mt-5 bg-secondary">
+            <div className="w-75 mx-auto bg-secondary">
                 <div className="event-box border border d-flex justify-content-center align-items-center">
-                    <div className="login-form">
+                    <div className="mx-auto text-center">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 {...register("countryName")}

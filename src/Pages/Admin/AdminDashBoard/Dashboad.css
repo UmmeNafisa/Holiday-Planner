@@ -14,3 +14,12 @@
   .admin-menu:hover {
     color: blue;
   }
+
+  /* media query  */
+@media only screen and (max-width: 600px) {
+  .admin-area{
+     height: 100%;
+     padding-bottom: 50px;  
+    }
+   
+}

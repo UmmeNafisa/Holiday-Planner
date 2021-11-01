@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import './ManageUsers.css'
 
 const ManageUsers = () => {
     const [orderInfo, SetOrderInfo] = useState([]);
@@ -23,36 +24,39 @@ const ManageUsers = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // if (data.modifiedCount > 0) {
-                //     alert("updated successfully")
-                //     SetOrderInfo({})
-                // }
+                if (data.modifiedCount > 0) {
+                    alert("updated successfully")
+                    SetOrderInfo({})
+                }
             })
     }
 
     //delete items 
 
     const handleDeleteItems = id => {
+        const proceed = window.confirm("Are sure  to delete it ?")
         console.log(id);
-        fetch(`http://localhost:5000/finalConfirmation/:${id}`, {
-            method: "DELETE",
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data)
-                if (data.deletedCount > 0) {
-                    alert('Deleted successfully')
-                    const remainingItems = orderInfo.filter(item => item._id !== id)
-                    SetOrderInfo(remainingItems)
-                }
-            });
+        if (proceed) {
+            fetch(`http://localhost:5000/finalConfirmation/:${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data)
+                    if (data.deletedCount > 0) {
+                        alert('Deleted successfully')
+                        const remainingItems = orderInfo.filter(item => item._id !== id)
+                        SetOrderInfo(remainingItems)
+                    }
+                });
+        }
 
     }
 
     return (
         <div>
             <h1> All Clients</h1>
-            <Table striped bordered hover>
+            <Table striped bordered hover responsive>
                 <thead>
                     <tr>
                         <th>#</th>
