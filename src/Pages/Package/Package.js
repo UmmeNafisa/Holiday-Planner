@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Package = (props) => {
     const { imgUrl, countryName, description, packageName, duration, groupSize, packageFees, _id, endDate, startDate } = props.pack;
-    console.log(props.pack);
+
     return (
         <div>
             <Col>

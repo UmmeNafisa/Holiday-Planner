@@ -6,7 +6,7 @@ const ConfirmBooking = () => {
 
     const onSubmit = data => {
         data.status = "Pending";
-        fetch('https://stormy-inlet-84335.herokuapp.com/confirmBooking', {
+        fetch('http://localhost:5000/confirmBooking', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)
@@ -55,7 +55,7 @@ const ConfirmBooking = () => {
                         <input type="submit" value="Submit" className="btn btn-all text-white fw-bold w-50 mb-3" />
                     </form>
                 </div>
-                {/* {data.status === "Pending" ? <p> your Booking is Pending </p> : <p>Your Booking Sucessfull</p>} */}
+
             </div>
         </div>
 

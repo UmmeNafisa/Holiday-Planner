@@ -10,7 +10,7 @@ const Packages = () => {
 
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/addPackages')
+        fetch('http://localhost:5000/addPackages')
             .then(res => res.json())
             .then(data => setpackages(data))
     }, [])

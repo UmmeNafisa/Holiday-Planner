@@ -1,22 +1,24 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import useAuth from '../../Context/useAuth';
 import { Link } from 'react-router-dom';
 import './BookItems.css'
 
 const BookItems = (props) => {
     const { imgUrl, countryName, packageName, _id } = props.items;
+    const { user } = useAuth();
     const [bookItems, setBookItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems')
+        fetch('http://localhost:5000/bookItems')
             .then(res => res.json())
             .then(data => setBookItems(data))
     }, [])
 
+    //delete an item 
     const handleDelete = (id) => {
         // console.log(id)
-        fetch(`https://stormy-inlet-84335.herokuapp.com/bookItems/${id}`, {
+        fetch(`http://localhost:5000/bookItems/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -27,16 +29,22 @@ const BookItems = (props) => {
                     setBookItems(remainingItems)
                 }
             });
-
-        // confirm Booking
-        const handleConfirmBooking = () => {
-            fetch(`https://stormy-inlet-84335.herokuapp.com/confirBooking`, {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify()
-            })
-        }
     }
+
+
+    // Confirm Booking btn to post the data 
+    const handleConfirmBooking = (id) => {
+        const finalItem = bookItems.find(item => item._id === id)
+        finalItem.email = user?.email;
+        finalItem.status = "Pending"
+        fetch(`http://localhost:5000/finalConfirmation`, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(finalItem)
+        })
+    }
+
+
     return (
         <div>
             <Col>
@@ -49,13 +57,9 @@ const BookItems = (props) => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Link to="/confirmBooking"> <Button className="btn-all me-2" > Confirm Booking </Button></Link>
+                <Link to="/confirmBooking"> <Button onClick={() => handleConfirmBooking(_id)} className="btn-all me-2" > Confirm Booking </Button></Link>
                 <Button className="btn-all" onClick={() => handleDelete(_id)}  > Delete </Button>
             </Col>
-
-
-            {/* onClick={() => {handleConfirmBooking()}} */}
-
         </div>
     );
 };

@@ -5,11 +5,14 @@ const ManageUsers = () => {
     const [client, SetClient] = useState([]);
 
     useEffect(() => {
-        fetch("https://stormy-inlet-84335.herokuapp.com/confirmBooking")
+        fetch("http://localhost:5000/confirmBooking")
             .then((res) => res.json())
             .then((data) => SetClient(data));
     }, []);
 
+    const handleSatusChange = (id) => {
+
+    }
 
     return (
         <div>
@@ -22,20 +25,20 @@ const ManageUsers = () => {
                         <th>Email</th>
                         <th>Address</th>
                         <th>Orders details</th>
-
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
-                {client?.map((pd, index) => (
+                {client?.map((item, index) => (
                     <tbody>
                         <tr>
                             <td>{index}</td>
-                            <td>{pd?.clientName}</td>
-                            <td>{pd?.emailAddress}</td>
-                            <td>{pd?.address}</td>
+                            <td>{item?.clientName}</td>
+                            <td>{item?.emailAddress}</td>
+                            <td>{item?.address}</td>
                             <td></td>
-                            <td>{pd?.status}</td>
-                            <button className="btn bg-danger p-2">Delete</button>
+                            <td> <button onClick={() => { handleSatusChange(item._id) }} className="btn btn-info p-2">{item?.status}</button> </td>
+                            <td> <button className="btn bg-danger p-2">Delete</button></td>
                         </tr>
                     </tbody>
                 ))}
