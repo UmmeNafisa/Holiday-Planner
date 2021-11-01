@@ -21,7 +21,6 @@ const BookItems = (props) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
                 if (data.deletedCount > 0) {
                     alert('Deleted successfully')
                     const remainingItems = bookItems.filter(item => item._id !== id)
@@ -29,13 +28,14 @@ const BookItems = (props) => {
                 }
             });
 
-        /* const handleBookingItem = () => {
-            // fetch(`https://stormy-inlet-84335.herokuapp.com/bookItems/${id}`, {
-            //     method: "POST",
-            //     headers: { "content-type": "application/json" },
-            //     body: JSON.stringify()
-            // })
-        } */
+        // confirm Booking
+        const handleConfirmBooking = () => {
+            fetch(`https://stormy-inlet-84335.herokuapp.com/confirBooking`, {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify()
+            })
+        }
     }
     return (
         <div>
@@ -54,7 +54,7 @@ const BookItems = (props) => {
             </Col>
 
 
-
+            {/* onClick={() => {handleConfirmBooking()}} */}
 
         </div>
     );

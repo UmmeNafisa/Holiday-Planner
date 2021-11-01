@@ -17,9 +17,6 @@ const ConfirmBooking = () => {
                     alert("Your Order Approval is Pending, Very Soon we Confirm you ")
                 }
             })
-
-
-
     };
 
     return (
@@ -30,13 +27,13 @@ const ConfirmBooking = () => {
                 <div className="login-form">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input
-                            {...register("clientName")}
+                            {...register("name")}
                             placeholder="Your Name"
                             className="p-2 m-2 w-100"
                         />
                         <br />
                         <input
-                            {...register("emailAddress")}
+                            {...register("email")}
                             placeholder="Email"
                             className="p-2 m-2 w-100"
                         />
@@ -44,6 +41,12 @@ const ConfirmBooking = () => {
                         <input
                             {...register("address")}
                             placeholder="Address"
+                            className="p-2 m-2 w-100"
+                        />
+                        <br />
+                        <input
+                            {...register("number")}
+                            placeholder="Contact Number "
                             className="p-2 m-2 w-100"
                         />
                         <br />

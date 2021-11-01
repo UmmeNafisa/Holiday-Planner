@@ -19,7 +19,7 @@ const Login = () => {
             })
     }
     return (
-        <div>
+        <div className="login-box">
             <h2 className="text-color mt-5"> Client Login with </h2>
             <Button onClick={handleGoogleLogin} className="rounded-pill google-btn"><img className="google-icon" src={googleLogo} alt="" /> Continue with Google </Button>
             <p> Don't have an google account? <Link to='' className="text-warning fw-bold">Create an account </Link> </p>

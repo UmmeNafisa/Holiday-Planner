@@ -1,5 +1,5 @@
 .admin-area {
-    background:  #f5c97675;
+    background:rgba(255, 235, 205, 0.508);
     color: black;
     height: 100vh;
   }
@@ -9,6 +9,7 @@
   .admin-menu {
     list-style: none;
     cursor: pointer;
+    text-align: start;
   }
   .admin-menu:hover {
     color: blue;

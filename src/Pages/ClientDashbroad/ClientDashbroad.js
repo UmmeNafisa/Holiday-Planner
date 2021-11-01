@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import AddNewPackage from '../AddNewPackage/AddNewPackage';
-import ManageUsers from '../ManageUsers/ManageUsers';
-import './Dashboad.css'
+import ClientPage from '../ClientSite/ClientPage';
+import YourBooking from '../YourBooking/YourBooking';
+import './ClientDashbroad.css'
 
-const Dashboard = () => {
-    const [control, setControl] = useState("allUsers");
+const ClientDashbroad = () => {
+    const [control, setControl] = useState("ManageBooking");
 
     return (
         <div className="admin-container">
@@ -13,34 +13,33 @@ const Dashboard = () => {
                     <div className="row admin-container">
                         <div className="col-md-2 ">
                             <div className="admin-area p-1">
-                                <h4 className="fw-bold pt-3 ">Dashboard</h4>
+                                <h4 className="fw-bold pt-3 " >Dashboard</h4>
                                 <div className="all-menu mt-5">
                                     <li
-                                        onClick={() => setControl("allUsers")}
+                                        onClick={() => setControl("ManageBooking")}
                                         className="admin-menu p-2 ps-5"
                                     >
-                                        All Users
+                                        Selected Items
                                     </li>
                                     <li
-                                        onClick={() => setControl("addPackages")}
+                                        onClick={() => setControl("YourBooking")}
                                         className="admin-menu p-2 ps-5"
                                     >
-                                        Add New Packages
+                                        Your Booking Items
                                     </li>
-
                                 </div>
                             </div>
                         </div>
-                        <div className=" col-md-10 text-center  text-center">
-                            {control === "allUsers" && <ManageUsers></ManageUsers>}
-                            {control === "addPackages" && <AddNewPackage></AddNewPackage>}
+                        <div className="col-md-10 text-center  text-center">
+                            {control === "ManageBooking" && <ClientPage></ClientPage>}
+                            {control === "YourBooking" && <YourBooking></YourBooking>}
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
-export default Dashboard;
+export default ClientDashbroad;

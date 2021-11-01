@@ -1,3 +1,10 @@
+.login-box{
+    
+    padding: 130px 0 ;
+    background-color: rgba(255, 235, 205, 0.486);
+    margin: auto;
+}
+
 .google-btn{
     padding: 5px 100px;
     color: black;

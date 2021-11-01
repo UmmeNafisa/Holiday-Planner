@@ -20,6 +20,8 @@ import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import ConfirmBooking from "./Pages/ConfirmBooking/ConfirmBooking";
 import ManageUsers from "./Pages/Admin/ManageUsers/ManageUsers";
 import Dashboard from "./Pages/Admin/AdminDashBoard/Dashboard";
+import YourBooking from "./Pages/YourBooking/YourBooking";
+import ClientDashbroad from "./Pages/ClientDashbroad/ClientDashbroad";
 
 
 function App() {
@@ -44,23 +46,29 @@ function App() {
             <Route path="/clientLogin">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/clientPage">
+            <Route path="/clientPage">
               <ClientPage></ClientPage>
-            </PrivateRoute>
+            </Route>
             <Route path="/destinations">
               <Destinations />
             </Route>
-            <PrivateRoute path="/addPackages">
+            <Route path="/addPackages">
               <AddNewPackage />
-            </PrivateRoute>
-            <PrivateRoute path="/manageUsers">
+            </Route>
+            <Route path="/manageUsers">
               <ManageUsers />
-            </PrivateRoute>
+            </Route>
             <PrivateRoute path="/adminDashboard">
               <Dashboard />
             </PrivateRoute>
+            <PrivateRoute path="/clientDashboard">
+              <ClientDashbroad />
+            </PrivateRoute>
             <Route path="/confirmBooking">
               <ConfirmBooking />
+            </Route>
+            <Route path="/yourBooking">
+              <YourBooking />
             </Route>
             <PrivateRoute path="/packageDetails/:id">
               <PackageDetails />
