@@ -7,7 +7,7 @@ const AddNewPackage = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
 
-        fetch('https://stormy-inlet-84335.herokuapp.com/addPackages', {
+        fetch('http://localhost:5000/addPackages', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)

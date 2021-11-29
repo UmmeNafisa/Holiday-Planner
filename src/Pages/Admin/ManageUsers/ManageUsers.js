@@ -6,7 +6,7 @@ const ManageUsers = () => {
     const [orderInfo, SetOrderInfo] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/finalConfirmation')
+        fetch('http://localhost:5000/finalConfirmation')
             .then((res) => res.json())
             .then((data) => SetOrderInfo(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageUsers = () => {
     //update status 
     const handleSatusChange = (id) => {
         const updatedItems = orderInfo.find(item => item._id === id)
-        fetch(`https://stormy-inlet-84335.herokuapp.com/finalConfirmation/:${id}`, {
+        fetch(`http://localhost:5000/finalConfirmation/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +36,7 @@ const ManageUsers = () => {
         const proceed = window.confirm("Are sure  to delete it ?")
         console.log(id);
         if (proceed) {
-            fetch(`https://stormy-inlet-84335.herokuapp.com/finalConfirmation/:${id}`, {
+            fetch(`http://localhost:5000/finalConfirmation/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

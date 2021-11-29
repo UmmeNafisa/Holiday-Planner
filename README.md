@@ -2,15 +2,21 @@
 
 website link: https://holiday-planner-da3be.web.app/
 
-## About Holiday Planner
+## About Website
 
-Holiday Planner organizes different tour planing in different countries from Dhaka, Bangladesh with a group of people at a cheap rate. 
+Full functional responsive website. It's a Tourism agency website. 
 
-### Why you Choose Holiday Planner
+### Functionality:
+- Users can select many packages, book a package, delete a package
+- User can check their booking updates on the dashboard
+- Admin can add packages, manage all booking item
+- Admin can update the booking status and user can see it on their dashboard
+- Users can log in using a google account through firebase authentication
 
-- We give you best packages with cheap rate
-- 5 Star Accommodation hotel
-- Air ticket is included in package fees
-- All transportation in destination location
-- Proper guideline about the tour
-- Give all kind of instructions about the tour
+
+#### Technology Used:
+- React,React-router-5, react bootstrap,React-hook form,
+- Heroku, Firebase
+- font-awesome, goggle font
+- MongoDB, Node, Express
+

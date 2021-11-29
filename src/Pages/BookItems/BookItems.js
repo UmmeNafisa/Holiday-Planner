@@ -10,7 +10,7 @@ const BookItems = (props) => {
     const [bookItems, setBookItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems')
+        fetch('http://localhost:5000/bookItems')
             .then(res => res.json())
             .then(data => setBookItems(data))
     }, [])
@@ -18,7 +18,7 @@ const BookItems = (props) => {
     //delete an item 
     const handleDelete = (id) => {
         // console.log(id)
-        fetch(`https://stormy-inlet-84335.herokuapp.com/bookItems/${id}`, {
+        fetch(`http://localhost:5000/bookItems/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -38,7 +38,7 @@ const BookItems = (props) => {
         finalItem.email = user?.email;
         finalItem.status = "Pending"
         delete finalItem._id
-        fetch('https://stormy-inlet-84335.herokuapp.com/finalConfirmation', {
+        fetch('http://localhost:5000/finalConfirmation', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(finalItem)

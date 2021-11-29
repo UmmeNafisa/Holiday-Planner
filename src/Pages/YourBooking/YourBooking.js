@@ -6,7 +6,7 @@ const YourBooking = () => {
     const [orderInfo, SetOrderInfo] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/finalConfirmation')
+        fetch('http://localhost:5000/finalConfirmation')
             .then((res) => res.json())
             .then((data) => SetOrderInfo(data));
     }, []);

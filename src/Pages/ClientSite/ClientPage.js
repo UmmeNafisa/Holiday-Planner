@@ -7,7 +7,7 @@ const ClientPage = () => {
     const [bookItems, setBookItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems')
+        fetch('http://localhost:5000/bookItems')
             .then(res => res.json())
             .then(data => {
                 setBookItems(data)

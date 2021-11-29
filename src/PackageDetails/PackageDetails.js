@@ -9,14 +9,14 @@ const PackageDetails = () => {
 
 
     useEffect(() => {
-        fetch(`https://stormy-inlet-84335.herokuapp.com/addPackages/${id}`)
+        fetch(`http://localhost:5000/addPackages/${id}`)
             .then(res => res.json())
             .then(data => setPack(data[0]))
 
     }, [])
 
     const handleBookNow = () => {
-        fetch('https://stormy-inlet-84335.herokuapp.com/bookItems', {
+        fetch('http://localhost:5000/bookItems', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(pack)
